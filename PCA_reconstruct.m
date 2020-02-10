@@ -16,8 +16,8 @@ for img=1:QuanteIMG
 end
 
 for img=1:QuanteIMG
-    totNewImage=0;
     for banda=1:3
+        totNewImage=0;
         %reset some random  coefficients
         K=eigFaces{banda}(:,1:NumberEigen);
         K(randi([0 1], size(K,1),size(K,2))==0)=0;
