@@ -103,7 +103,7 @@ elseif approccio==4
         'RandXTranslation',[0 5],...
         'RandYTranslation', [0 5]);
 elseif approccio==5
-    [trainingImages,y]=DataAugmentation(trainingImages,'PCA',1,y,length(y)*0.95);%remember that y stores the training labels
+    [trainingImages,y]=DataAugmentation(single(trainingImages),'PCA',1,y,length(y)*0.95);%remember that y stores the training labels
 elseif approccio==6
     [trainingImages,y]=DataAugmentation(trainingImages,'DCT',1,y);
 end
